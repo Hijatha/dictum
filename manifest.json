@@ -7,7 +7,8 @@
 
   "content_scripts": [{
     "css": ["styles.css"],
-	"js": ["res/jquery-3.3.1.min.js", "content.js"],
+	"js": ["res/jquery-3.3.1.min.js", "content.js", "res/comments.js"],
+	"json" : ["res/comments.json"],
     "matches": ["https://www.cnn.com/*"]
   }]
 }

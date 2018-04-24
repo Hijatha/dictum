@@ -1,11 +1,11 @@
-comment {
+.comment {
 	border-style:solid;
 	border-width:thin thin thin thick;
 	border-color:grey;
 	padding:5px 0px 0px 5px;
 }
 
-reply {
+.reply {
 	border-style:solid;
 	border-width:thin hidden hidden hidden;
 	border-color:grey;

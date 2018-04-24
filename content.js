@@ -1,25 +1,46 @@
 console.log("TESTING");
-jQuery(document).ready(function(){
-
-});
+// jQuery(document).ready(function(){
+	// $('#body-text').after(genComment(comments[0]));
+function genBox()
+{
+	document.write(genComment(comments[0]));
+}
+// });
 
 function genComment(commentChain)
 {
 	var html = "";
-	if (level = 0)
+	html = createBox(commentChain, 'comment', html);
+
+	if (!jQuery.isEmptyObject(commentChain.reply))
 	{
-		html = html + '<div id="comment"><b>'
+		html = genReplies(commentChain.reply, html);
 	}
-	else if (!jQuery.isEmptyObject(commentChain.reply) && level != 0)
-	{
-		html = html +
-		'<div id="reply"><b>' + commentChain.handle + '</b><i><small><b> • </b>' +
-		commentChain.points + ' points' + '<b> ∙ </b>' + commentChain.time + '</small></i><br>' +
-		commentChain.comment + '<br>' +
-	}
+	html = html + '</div>';
+
+	return html;
 }
 
 function genReplies(commentChain, html)
 {
+	html = createBox(commentChain, 'reply', html);
 
+	if (!jQuery.isEmptyObject(commentChain.reply))
+	{
+		html = genReplies(commentChain.reply, html);
+	}
+	html = html + '</div>';
+
+	return html;
+}
+
+function createBox(commentChain, type, html)
+{
+	html = html + '<div class="' + type + '"><b>' +
+	commentChain.handle + '</b><i><small><b> &#8226 </b>' +
+	commentChain.points + ' points' + '<b> &#183 </b>' +
+	commentChain.time + ' hours ago</small></i><br>' +
+	commentChain.comment + '<br>';
+	console.log(html);
+	return html;
 }
