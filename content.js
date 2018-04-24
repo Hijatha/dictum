@@ -1,4 +1,3 @@
-console.log("TESTING");
 // jQuery(document).ready(function(){
 	// $('#body-text').after(genComment(comments[0]));
 function genBox()
@@ -38,9 +37,8 @@ function createBox(commentChain, type, html)
 {
 	html = html + '<div class="' + type + '"><b>' +
 	commentChain.handle + '</b><i><small><b> &#8226 </b>' +
-	commentChain.points + ' points' + '<b> &#183 </b>' +
+	commentChain.points + ' points<b> &#183 </b>' +
 	commentChain.time + ' hours ago</small></i><br>' +
 	commentChain.comment + '<br>';
-	console.log(html);
 	return html;
 }

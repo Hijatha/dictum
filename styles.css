@@ -1,13 +1,14 @@
 .comment {
-	border-style:solid;
-	border-width:thin thin thin thick;
-	border-color:grey;
-	padding:5px 0px 0px 5px;
+	outline-style: solid;
+	outline-width: 3px 3px 3px 3px;
+	outline-color: lightgrey;
+	padding: 10px 5px 10px 10px;
 }
 
 .reply {
-	border-style:solid;
-	border-width:thin hidden hidden hidden;
-	border-color:grey;
-	padding:10px;
+	border-style: solid;
+	border-width: 0px 0px 0px 2px;
+	border-color: lightgrey;
+	margin-top: 2px;
+	padding: 10px 10px 0px 10px;
 }

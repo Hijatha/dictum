@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "Modify CSS and HTML",
-  "version": "0.1.0",
+  "name": "dictum",
+  "version": "0.0.1",
   "description": "Lateral blog post demo extension",
 
   "content_scripts": [{
