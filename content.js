@@ -6,6 +6,7 @@ function genBox()
 }
 // });
 
+
 function genComment(commentChain)
 {
 	var html = "";
