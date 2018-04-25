@@ -1,25 +1,50 @@
-.comment
+.comment_frame
 {
+	margin: 0px;
 	border-style: solid;
-	border-width: 3px 3px 3px 3px;
+	border-width: 2px 2px 2px 2px;
 	border-color: lightgrey;
-	padding: 10px 5px 5px 5px;
+	padding: 5px 0px 0px 0px;
 	display: flex;
 }
 
-.reply
+.comment_reply_frame
 {
-	margin-top: 2px;
-	padding: 10px 10px 0px 0px;
+	margin-top: 0px;
+	padding: 5px 5px 0px 0px;
 	display: flex;
 }
 
 .collapse
 {
-	font-size: 10px;
-	margin: 1px;
+	cursor: pointer;
+	width: 12px;
 	color : grey;
+	font-size: 10px;
+	margin: 0px 2px 2px 2px;
 	padding: 2px 2px 2px 2px;
 	background-color: lightgrey;
-	width: 12px;
+
+	/*https://stackoverflow.com/a/4407335*/
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.collapse:hover
+{
+	background-color: grey;
+}
+
+.comment {
+	padding-left: 2px;
+}
+
+.comment_body
+{
+
 }
