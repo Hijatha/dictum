@@ -5,6 +5,7 @@ function genBox()
 	document.write(genComment(comments[0]));
 }
 // });
+
 function genComment(commentChain)
 {
 	var html = "";
