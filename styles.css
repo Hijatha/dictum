@@ -1,4 +1,4 @@
-.comment_frame
+.commentSection
 {
 	margin: 0px;
 	border-style: solid;
@@ -8,7 +8,7 @@
 	display: flex;
 }
 
-.comment_reply_frame
+.reply
 {
 	margin-top: 0px;
 	padding: 5px 5px 0px 0px;

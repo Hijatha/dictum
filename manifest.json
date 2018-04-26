@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "manifest_version": 2,
 
@@ -8,24 +7,7 @@
 
   "content_scripts": [{
     "css": ["styles.css"],
-	"js": ["res/jquery-3.3.1.min.js", "content.js", "res/comments.js"],
-	"json" : ["res/comments.json"],
+	"js": ["res/jquery-3.3.1.min.js", "res/comments.js", "content.js"],
     "matches": ["https://www.cnn.com/*"]
   }]
 }
-=======
-{
-  "manifest_version": 2,
-
-  "name": "dictum",
-  "version": "0.0.1",
-  "description": "Lateral blog post demo extension",
-
-  "content_scripts": [{
-    "css": ["styles.css"],
-	"js": ["res/jquery-3.3.1.min.js", "content.js", "res/comments.js"],
-	"json" : ["res/comments.json"],
-    "matches": ["https://www.cnn.com/*"]
-  }]
-}
->>>>>>> b45ce4c450d89c57bbfbfd64462bcb15daee33ed
