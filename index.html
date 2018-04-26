@@ -8,6 +8,10 @@
 <body>
 	<div class="commentSection" id="replies-test"></div>
 	<script type="text/javascript">
-		createComment(comments[0], 'test');
+	var length = comments.length;
+	for (var i = 0; i < length; i++)
+	{
+		createComment(comments[i], 'test');
+	}
 	</script>
 </body>

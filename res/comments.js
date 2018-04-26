@@ -6,5 +6,6 @@ var comments = [
 			]}
 		]},
 		{"id":5, "handle":"someGuy121", "points":3, "time":1, "comment":"Stop, please.", "reply":[{}]}
-	]}
+	]},
+	{"id":6, "handle":"kanyeFan34", "points":-1, "time":0, "comment":"Boooo", "reply":[{}]}
 ];

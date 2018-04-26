@@ -1,24 +1,29 @@
+.dictum
+{
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	line-height: normal;
+}
+
 .commentSection
 {
 	margin: 0px;
 	border-style: solid;
 	border-width: 2px 2px 2px 2px;
-	border-color: #f1f1f1;
-	padding: 5px 0px 5px 0px;
-	background-color: #fafafa;
-	display: flex;
+	border-color: #e0e0e0;
+	padding: 0px 5px 5px 3px;
+	/* background-color: #fafafa; */
 }
 
 .commentFrame
 {
 	border-width: 1px;
 	margin-top: 0px;
-	padding: 5px 5px 0px 2px;
+	padding: 5px 0px 0px 2px;
 	display: flex;
 }
 .collapse
 {
-	margin: 0px 0px 0px 2px;
+	margin: 0px 5px 0px 0px;
 	border-style: solid;
 	border-width: 0px 2px 0px 0px;
 	/* border-width: 0px 2px 0px 2px; */
@@ -29,6 +34,7 @@
 	cursor: pointer;
 	width: 14px;
 	color : grey;
+	font: default;
 	font-size: 10px;
 
 	/*https://stackoverflow.com/a/4407335*/
@@ -46,10 +52,16 @@
 }
 .commentAndReplies
 {
+	width:100%;
 }
 .comment
 {
-	padding: 8px 0px 8px 5px;
+	padding: 8px 10px 8px 5px;
+	/* background-color: #f2f2f2; */
+	border-width: 2px;
+	border-style: solid;
+	border-color: #e8e8e8;
+	background-color: #f8f8f8;
 }
 .commentBody
 {
