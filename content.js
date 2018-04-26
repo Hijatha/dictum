@@ -9,22 +9,23 @@ function genComments(afterThis)
 
 function collapseComment(id)
 {
+	var speed = 250;
 	console.log("CALLED");
 	if ($('#commentBody-' + id).css('display') !== 'none')
 	{
 		console.log("HIDE");
 		$('#collapse-' + id).html("[+]");
-		$('#commentBody-'+id).hide(100);
-		$('#bottomBar-'+id).hide(100);
-		$('#replies-'+id).hide(100);
+		$('#commentBody-'+id).hide(speed);
+		$('#bottomBar-'+id).hide(speed);
+		$('#replies-'+id).hide(speed);
 	}
 	else
 	{
 		console.log("SHOW");
 		$('#collapse-' + id).html("[&minus;]");
-		$('#commentBody-'+id).show(100);
-		$('#bottomBar-'+id).show(100);
-		$('#replies-'+id).show(100);
+		$('#commentBody-'+id).show(speed);
+		$('#bottomBar-'+id).show(speed);
+		$('#replies-'+id).show(speed);
 	}
 }
 
