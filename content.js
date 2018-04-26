@@ -9,32 +9,43 @@ function genComments(afterThis)
 
 function collapseComment(id)
 {
-	if ($('#collapse-' + id).text == "[–]")
+	console.log("CALLED");
+	if ($('#commentBody-' + id).css('display') !== 'none')
 	{
-		$('#collapse-' + id).text = "[+]";
+		console.log("HIDE");
+		$('#collapse-' + id).html("[+]");
+		$('#commentBody-'+id).hide(100);
+		$('#bottomBar-'+id).hide(100);
+		$('#replies-'+id).hide(100);
 	}
 	else
 	{
-		$('#collapse-' + id).text === "[&ndash;]";
+		console.log("SHOW");
+		$('#collapse-' + id).html("[&minus;]");
+		$('#commentBody-'+id).show(100);
+		$('#bottomBar-'+id).show(100);
+		$('#replies-'+id).show(100);
 	}
-
-	$('#commentAndReplies-'+id).toggle();
 }
 
 function createComment(obj, id)
 {
 	//Add new Frame for comment
-	$('#commentAndReplies-' + id).append('<div class="reply" id="commentFrame-'+obj.id+'"></div>');
+	$('#replies-' + id).append('<div class="commentFrame" id="commentFrame-'+obj.id+'"></div>');
 	//Add collapse button
-	$('#commentFrame-'+obj.id).append('<p href="javascript:void(0);" class="collapse" id="collapse-'+obj.id+'">[&ndash;]</p>');
+	$('#commentFrame-'+obj.id).append('<p href="javascript:void(0);" class="collapse" id="collapse-'+obj.id+'">[&minus;]</p>');
 	//Add div for comment
-	$('#commentFrame-'+obj.id).append('<div class="comment" id="comment-'+obj.id+'"></div>');
+	$('#commentFrame-'+obj.id).append('<div class="commentAndReplies" id="commentAndReplies-'+obj.id+'"></div>');
+	//Add Comment div
+	$('#commentAndReplies-'+obj.id).append('<div class="comment" id="comment-'+obj.id+'"></div>');
+	//Add Replies div
+	$('#commentAndReplies-'+obj.id).append('<div class="replies" id = "replies-'+obj.id+'"></div>');
 	//Add Top bar
-	$('#comment-'+obj.id).append('<div class="topbar" id="topbar-'+obj.id+'"<b><span id="handle-'+obj.id+'">'+obj.handle+'</span></b><i><small> &#8226 <span id="points-' + obj.id + '">'+ obj.points +'</span> points &#183 <span id="time-' + obj.time + '">'+ obj.time +'</span> hours ago</small></i><br></div>');
+	$('#comment-'+obj.id).append('<div class="topbar" id="topbar-'+obj.id+'"<b><span id="handle-'+obj.id+'">'+obj.handle+'</span></b><i><small> &bull; <span id="points-'+obj.id +'">'+obj.points+'</span> points &middot; <span id="time-' + obj.time + '">'+ obj.time +'</span> hours ago</small></i><br></div>');
 	//Add Comment body
-	$('#comment-'+obj.id).append('<div id="commentAndReplies-' + obj.id + '"><div class="commentBody" id="commentBody-'+obj.id+'">'+obj.comment+'</div></div>');
+	$('#comment-'+obj.id).append('<div class="commentBody" id="commentBody-' + obj.id + '"><div class="commentBody" id="commentBody-'+obj.id+'">'+obj.comment+'</div></div>');
 	//Add Lower Bar
-	$('#commentAndReplies-'+obj.id).append('<div id="bottomBar-' + obj.id + '"><i><small>reply</small></i></div>');
+	$('#comment-'+obj.id).append('<div id="bottomBar-'+obj.id+'"><i><small>reply</small></i></div>');
 	//Add collapse button functionality
 	$('#collapse-'+obj.id).on("click", function(){collapseComment(obj.id);});
 	//Add divs for child if child exists
