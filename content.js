@@ -2,7 +2,7 @@ genComments('#body-text');
 console.log("TESTING");
 function genComments(afterThis)
 {
-	$(afterThis).after('<div class="commentSection" id="commentAndReplies-dictum"></div>');
+	$(afterThis).after('<div class="commentSection" id="replies-dictum"></div>');
 
 	createComment(comments[0], 'dictum');
 }
