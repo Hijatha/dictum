@@ -5,7 +5,9 @@ var comments = [
 				{"id":4, "handle":"Hijatha", "points":20, "time":1, "comment":"Np, bb.", "reply":[{}]}
 			]}
 		]},
-		{"id":5, "handle":"someGuy121", "points":3, "time":1, "comment":"Stop, please.", "reply":[{}]}
+		{"id":5, "handle":"someGuy121", "points":3, "time":1, "comment":"Stop, please.", "reply":[
+			{"id":7, "handle":"Hijatha", "points":10, "time":0, "comment":"no u", "reply":[{}]}
+		]}
 	]},
 	{"id":6, "handle":"kanyeFan34", "points":-1, "time":0, "comment":"Boooo", "reply":[{}]}
 ];
