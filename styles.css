@@ -7,8 +7,6 @@
 .commentSection
 {
 	margin: 0px;
-	border-style: solid;
-	border-width: 2px 2px 2px 2px;
 	border-color: #e0e0e0;
 	padding: 0px 5px 5px 3px;
 	/* background-color: #fafafa; */
@@ -16,19 +14,17 @@
 
 .commentFrame
 {
-	padding: 5px 0px 0px 2px;
+	padding: 0px 0px 0px 1px;
 	display: flex;
 }
 .collapse
 {
-	margin: 0px 5px 0px 0px;
+	margin: 0px 0px 2px 0px;
 	border-style: solid;
-	border-width: 1px 2px 0px 0px;
-	/* border-width: 0px 2px 0px 2px; */
+	border-width: 0px 2px 0px 0px;
 	border-color: #c8c8c8;
-	border-radius: 5px 0px 0px 5px;
+	border-radius: 0px 0px 0px 3px;
 	padding: 2px 2px 2px 2px;
-	/* background-color: #f2f2f2; */
 	cursor: pointer;
 	width: 14px;
 	color : grey;
@@ -54,13 +50,24 @@
 }
 .comment
 {
-	padding: 8px 10px 8px 5px;
-	/* background-color: #f2f2f2; */
+	margin: 0px 0px 2px 2px;
+	padding: 5px 8px 5px 5px;
 	border-width: 2px 2px 2px 2px;
 	border-style: solid;
-	border-color: #efefef;
+	border-color: #efefef #c8c8c8 #efefef #efefef;
 	background-color: #f8f8f8;
 }
+.bottomBar
+{
+	font-style: italic;
+	font-size: 10px;
+}
+.vote
+{
+	width: 10px;
+		/* display:inline-block; */
+}
+
 .commentBody
 {
 }

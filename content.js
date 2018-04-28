@@ -37,6 +37,8 @@ function createComment(obj, id)
 	$('#replies-' + id).append('<div class="dictum commentFrame" id="commentFrame-'+obj.id+'"></div>');
 	//Add collapse button
 	$('#commentFrame-'+obj.id).append('<p href="javascript:void(0);" class="dictum collapse" id="collapse-'+obj.id+'">[&minus;]</p>');
+	//Add voting buttons div
+	$('#commentFrame-'+obj.id).append('<div class="vote"><img src="res/upvote.png"><img src="res/downvote.png"></div>');
 	//Add div for comment
 	$('#commentFrame-'+obj.id).append('<div class="dictum commentAndReplies" id="commentAndReplies-'+obj.id+'"></div>');
 	//Add Comment div
@@ -48,7 +50,7 @@ function createComment(obj, id)
 	//Add Comment body
 	$('#comment-'+obj.id).append('<div class="dictum commentBody" id="commentBody-' + obj.id + '"><div class="dictum commentBody" id="commentBody-'+obj.id+'">'+obj.comment+'</div></div>');
 	//Add Lower Bar
-	$('#comment-'+obj.id).append('<div id="bottomBar-'+obj.id+'"><i><small>reply</small></i></div>');
+	$('#comment-'+obj.id).append('<div class="bottomBar" id="bottomBar-'+obj.id+'">reply</div>');
 	//Add collapse button functionality
 	$('#collapse-'+obj.id).on("click", function(){collapseComment(obj.id);});
 	//Add divs for child if child exists
