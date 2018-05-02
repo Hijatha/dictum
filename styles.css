@@ -25,12 +25,36 @@
 	border-color: #c8c8c8;
 	border-radius: 0px 0px 0px 3px;
 	padding: 2px 2px 2px 2px;
-	cursor: pointer;
 	width: 14px;
 	color : grey;
 	font: default;
 	font-size: 10px;
+}
 
+.collapse:hover
+{
+	background-color: #e8e8e8;
+}
+.replybox
+{
+		width:100%;
+}
+.replyTextArea
+{
+	width: 100%;
+	display:block;
+}
+.saveButton
+{
+	display:inline;
+}
+.cancelButton
+{
+	display:inline;
+}
+.button
+{
+	cursor: pointer;
 	/*https://stackoverflow.com/a/4407335*/
 	-webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
@@ -39,10 +63,6 @@
           -ms-user-select: none; /* Internet Explorer/Edge */
 		  	  user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
-}
-.collapse:hover
-{
-	background-color: #e8e8e8;
 }
 .commentAndReplies
 {
