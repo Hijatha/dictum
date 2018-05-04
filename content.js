@@ -1,13 +1,15 @@
-genComments('#body-text');
-function genComments(afterThis)
-{
-	$(afterThis).after('<div class="dictum commentSection" id="replies-dictum"></div>');
-	var length = comments.length;
-	for (var i = 0; i < length; i++)
+$(document).ready(function(){
+	$.getJSON('http://localhost:8090/comments/comments.json', function(data)
 	{
-		createComment(comments[i], 'dictum');
-	}
-}
+		$('#body-text').after('<div class="dictum commentSection" id="replies-dictum"></div>');
+		var length = data.length;
+		for (var i = 0; i < length; i++)
+		{
+			createComment(data[i], 'dictum');
+			console.log('Dictum successfully loaded');
+		}
+	});
+});
 
 function collapseComment(id)
 {
@@ -31,10 +33,8 @@ function collapseComment(id)
 function expandReplyBox(id)
 {
 	var speed = 250;
-	console.log('TEST');
 	if ($('#replyBox-' + id).css('display') == 'none')
 	{
-		console.log('TEST1');
 		$('#replyBox-' + id).show(speed);
 	}
 }
@@ -55,7 +55,7 @@ function createComment(obj, id)
 	//Add collapse button
 	$('#commentFrame-'+obj.id).append('<p href="javascript:void(0);" class="dictum button collapse" id="collapse-'+obj.id+'">[&minus;]</p>');
 	//Add voting buttons div
-	$('#commentFrame-'+obj.id).append('<div class="vote"><img src="res/upvote.png"><img src="res/downvote.png"></div>');
+	$('#commentFrame-'+obj.id).append('<div class="vote"><img src="'+chrome.extension.getURL('res/upvote.png')+'"><img src="'+chrome.extension.getURL('res/downvote.png')+'"></div>');
 	//Add div for comment
 	$('#commentFrame-'+obj.id).append('<div class="dictum commentAndReplies" id="commentAndReplies-'+obj.id+'"></div>');
 	//Add Comment div

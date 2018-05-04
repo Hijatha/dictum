@@ -4,10 +4,11 @@
   "name": "dictum",
   "version": "0.0.1",
   "description": "Lateral blog post demo extension",
-
+  "permissions": ["http://localhost/*"],
   "content_scripts": [{
     "css": ["styles.css"],
-	"js": ["res/jquery-3.3.1.min.js", "res/comments.js", "content.js"],
+	"js": ["res/jquery-3.3.1.min.js", "content.js"],
     "matches": ["https://www.cnn.com/*"]
-  }]
+  }],
+  "web_accessible_resources" :["res/upvote.png", "res/downvote.png"]
 }

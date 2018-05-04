@@ -2,16 +2,23 @@
 	<meta charset="ISO-8859-1">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<script src="res/jquery-3.3.1.min.js"></script>
-	<script src="res/comments.js"></script>
+	<!-- <script src="res/comments.js"></script> -->
 	<script src="content.js"></script>
 </head>
 <body>
 	<div class="commentSection" id="replies-test"></div>
 	<script type="text/javascript">
-	var length = comments.length;
-	for (var i = 0; i < length; i++)
-	{
-		createComment(comments[i], 'test');
-	}
+	$.ajax({
+		type: "POST",
+		url: 'http://localhost:8090/comments/comments.json',
+		async: false,
+		success: function(comments)
+		{
+			var length = comments.length;
+			for (var i = 0; i < length; i++)
+			{
+				createComment(comments[i], 'test');
+			}
+		}});
 	</script>
 </body>
